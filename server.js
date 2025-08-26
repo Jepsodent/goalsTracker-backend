@@ -12,7 +12,7 @@ app.use(express.json());
 await connectDB();
 
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.json({success:true , message: "API IS WORKING"});
 })
 
