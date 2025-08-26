@@ -10,7 +10,6 @@ export const userAuth = async (req, res, next ) => {
     
         const verified = jwt.verify(token, process.env.JWT_SECRET);
         if(verified.id){
-            console.log(verified.id);
             req.userId = verified.id;
             next();
         }else{
